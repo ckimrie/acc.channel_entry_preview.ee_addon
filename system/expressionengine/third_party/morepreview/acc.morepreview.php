@@ -7,10 +7,10 @@
  * @package default
  * @author Christopher Imrie
  */
-class Moso_preview_acc {
+class Morepreview_acc {
 
-	var $name			= 'Channel Entries Preview';
-	var $id				= 'moso_preview';
+	var $name			= 'morePreview';
+	var $id				= 'morepreview';
 	var $version		= '1.0';
 	var $description	= 'Allows you to preview new channel entries immediately after publishing. <br/><br/>Ensure you have set the <em>Live Look Template</em> in each Channel\'s settings to enable the preview window.';
 	var $sections		= array();
@@ -56,7 +56,7 @@ class Moso_preview_acc {
 		
 		//If there is one, load up the JS
 		if($q->num_rows() > 0){
-			$this->EE->cp->load_package_js('moso_preview');
+			$this->EE->cp->load_package_js('morepreview');
 		}
 		
 	}
