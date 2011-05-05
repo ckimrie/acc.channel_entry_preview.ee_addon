@@ -21,11 +21,11 @@ h2. Browser Compatibility
 h2. Installation
 
 # Copy the @system/expressionengine/third_party/morepreview@ folder to your @system/expressionengine/third_party/@ folder.
-# Go to _Add-ons&rarr;Accessories_ in the ExpressionEngine control panel and install the accessory labelled _mosoPreview_.
+# Go to _Add-ons&rarr;Accessories_ in the ExpressionEngine control panel and install the accessory labelled _morePreview_.
 
 h2. Control Panel Configuration
 
-The mosoPreview add-on utilizes ExpressionEngines native _Live Look_ feature to preview your content from within the Control Panel.  So for this add-on to work your must configure each channel's _Live Look Template_.  
+The morePreview add-on utilizes ExpressionEngines native _Live Look_ feature to preview your content from within the Control Panel.  So for this add-on to work your must configure each channel's _Live Look Template_.  
 
 * You can configure a channel's _Live Look Template_ by going to _Admin&rarr;Channel Administration&rarr;Channels_ and clicking _Edit Preferences_ for the channel you wish to configure.  You will find the _Live Look Template_ options in the _Path Settings_ section of the channel preferences.
 
@@ -43,7 +43,7 @@ Due to the way the _Live Look_ feature works, your templates must be able to res
 	http://www.yoursite.com/template_group/template/123
 </pre>
 
-If you have used a simple implementation of the @{exp:channel:entries}@ tag, and left _dynamic="on"_ (which is the default) and have not specified _entry_id_ or _url_title_ in the parameters, then EE will automatically switch from _url titles_ to _entry id's_ automatically and the mosoPreview will work straight away.
+If you have used a simple implementation of the @{exp:channel:entries}@ tag, and left _dynamic="on"_ (which is the default) and have not specified _entry_id_ or _url_title_ in the parameters, then EE will automatically switch from _url titles_ to _entry id's_ automatically and the morePreview will work straight away.
 
 For example, the following code is _Live Look_ compatible.
 
@@ -90,7 +90,7 @@ h2. Change log
 
 h4. 1.1
 
-* Renamed fieldtype to _mosoGeocoder_
+* Renamed fieldtype to _morePreview_
 * Rearranged add-on folder structure to reflect EE folder structure
 * Added README and LICENCE
 
