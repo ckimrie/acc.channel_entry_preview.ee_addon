@@ -74,7 +74,7 @@ h4. Previewing Closed Entries
 
 By instructing the @{exp:channel:entries}@ to display closed entries, you can achieve a publishing workflow that allows you to preview entries before they go live on your site.  By simply switching the entry's status to "closed" and then submitting the ExpressionEngine publish form, you will be able to preview your new entry immediately.
 
-For best results (and security), it is best to create a *new* template just for _Live Look_, and then restrict access to the page for just your Member user group using ExpressionEngine's "Template Access Restriction":http://expressionengine.com/user_guide/cp/design/templates/template_access.html feature.  This will allow you to preview the page (since you are already logged into the Control Panel) but the general public will not be able to access this template without logging in.
+For best results (and security), it is best to create a *new* template just for _Live Look_ and then restrict access to the page for just your Member user group using ExpressionEngine's "Template Access Restriction":http://expressionengine.com/user_guide/cp/design/templates/template_access.html feature.  This will allow you to preview the page (since you are already logged into the Control Panel) but the general public will not be able to access this template without logging in.
 
 Once this template has been created, the following code will allow you to view 'closed' entries securely.
 
