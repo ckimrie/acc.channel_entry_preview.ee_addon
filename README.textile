@@ -4,6 +4,8 @@ h1. morePreview
 
 An ExpressionEngine 2 add-on that allows you to preview entries from the EE control panel immediately after publishing.  With correctly setup templates, it even allows you to preview entries with 'closed' status, allowing you to preview content on your site before it becomes live.
 
+!http://www.moresoda.co.uk/images/uploads/morepreview1.jpg(morePreview addon allows you to preview entries after publishing)!
+
 h2. Info
 
 Developed by Moresoda Design Ltd, "http://moresoda.co.uk":http://moresoda.co.uk
