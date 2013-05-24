@@ -1,0 +1,103 @@
+!http://moresoda.co.uk/external_assets/github/moresoda-logo.png(moresoda)!:http://moresoda.co.uk
+
+h1. morePreview
+
+An ExpressionEngine 2 add-on that allows you to preview entries from the EE control panel immediately after publishing.  With correctly setup templates, it even allows you to preview entries with 'closed' status, allowing you to preview content on your site before it becomes live.
+
+!http://moresoda.co.uk/uploads/images/morepreview1.jpg(morePreview add-on allows you to preview entries after publishing)!
+
+h2. Info
+
+Developed by Moresoda Design Ltd, "http://moresoda.co.uk":http://moresoda.co.uk
+
+h2. Requirements
+
+* ExpressionEngine 2.1.3 +
+
+h2. Browser Compatibility
+
+* Firefox 2+
+* Safari 2+
+* Chrome 3+
+* Opera 9+
+* Internet Explorer 7+
+
+h2. Installation
+
+# Copy the @system/expressionengine/third_party/morepreview@ folder to your @system/expressionengine/third_party/@ folder.
+# Go to _Add-ons&rarr;Accessories_ in the ExpressionEngine control panel and install the accessory labelled _morePreview_.
+
+h2. Control Panel Configuration
+
+The morePreview add-on utilizes ExpressionEngines native _Live Look_ feature to preview your content from within the Control Panel.  So for this add-on to work your must configure each channel's _Live Look Template_.  
+
+* You can configure a channel's _Live Look Template_ by going to _Admin&rarr;Channel Administration&rarr;Channels_ and clicking _Edit Preferences_ for the channel you wish to configure.  You will find the _Live Look Template_ options in the _Path Settings_ section of the channel preferences.
+
+h2. Template Configuration
+
+h3. Basic
+
+Due to the way the _Live Look_ feature works, your templates must be able to respond to _entry id's_ being sent in the URL instead of the _url title_.
+
+<pre>
+	//The more common ExpressionEngine URL pattern that utilizes URL titles for links
+	http://www.yoursite.com/template_group/template/new-entry-url-title
+	
+	//The Live Look URL structure uses entry id's instead of url titles.
+	http://www.yoursite.com/template_group/template/123
+</pre>
+
+If you have used a simple implementation of the @{exp:channel:entries}@ tag, and left _dynamic="on"_ (which is the default) and have not specified _entry_id_ or _url_title_ in the parameters, then EE will automatically switch from _url titles_ to _entry id's_ automatically and the morePreview will work straight away.
+
+For example, the following code is _Live Look_ compatible.
+
+<pre>
+	{exp:channel:entries channel="channel_name"}
+		<h1>{title}</h1>
+	{/exp:channel:entries}
+</pre>
+
+
+h3. Advanced
+
+h4. Non standard URL's
+
+If you are using non standard URL's, then you need to be specific in the @{exp:channel:entries}@ parameters about what segment ExpressionEngine should use:
+
+<pre>
+	{exp:channel:entries channel="channel_name" entry_id="{segment_3}"}
+		<h1>{title}</h1>
+	{/exp:channel:entries}
+</pre>
+
+_Note: Remember that Live Look uses the entry id in its URL's, not the url title_.
+
+h4. Previewing Closed Entries
+
+By instructing the @{exp:channel:entries}@ to display closed entries, you can achieve a publishing workflow that allows you to preview entries before they go live on your site.  By simply switching the entry's status to "closed" and then submitting the ExpressionEngine publish form, you will be able to preview your new entry immediately.
+
+For best results (and security), it is best to create a *new* template just for _Live Look_ and then restrict access to the page for just your Member user group using ExpressionEngine's "Template Access Restriction":http://expressionengine.com/user_guide/cp/design/templates/template_access.html feature.  This will allow you to preview the page (since you are already logged into the Control Panel) but the general public will not be able to access this template without logging in.
+
+Once this template has been created, the following code will allow you to view 'closed' entries securely.
+
+<pre>
+	{exp:channel:entries channel="channel_name" status="open|closed"  show_future_entries="yes"}
+		<h1>{title}</h1>
+	{/exp:channel:entries}
+</pre>
+
+_Note: The show_future_entries parameter has been added in case you have set your entry_date to some point in the future_
+
+
+
+h2. Change log
+
+h4. 1.1
+
+* Renamed fieldtype to _morePreview_
+* Rearranged add-on folder structure to reflect EE folder structure
+* Added README and LICENCE
+
+h4. 1.0
+
+Public release
