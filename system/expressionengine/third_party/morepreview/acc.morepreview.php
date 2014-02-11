@@ -71,6 +71,7 @@ class Morepreview_acc {
 	 */
 	public function hide_accessory_tab()
 	{
+		if (!property_exists($this->EE, 'cp')) { return false; }
 		$this->EE->cp->load_package_js('hide_tab');
 	}
 	
