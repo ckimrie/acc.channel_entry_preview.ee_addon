@@ -11,7 +11,7 @@ class Morepreview_acc {
 
 	var $name			= 'morePreview';
 	var $id				= 'morepreview';
-	var $version		= '1.0';
+	var $version		= '1.2';
 	var $description	= 'Allows you to preview new channel entries immediately after publishing. <br/><br/>Ensure you have set the <em>Live Look Template</em> in each Channel\'s settings to enable the preview window.';
 	var $sections		= array();
 
